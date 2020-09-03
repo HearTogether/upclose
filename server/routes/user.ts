@@ -42,16 +42,18 @@ userRouter.post('/verify', (req, res) => {
         res.send(userData.dataValues);
       } else {
         // user is not in database, so let's add the user
+        // Google keys rotate, so change this stuff
+        // console.log(userObj)
         const {
-          yu, Cd, OU, PK, sU, sW,
-        } = userObj.Ot;
+          tV, uT, Ad, $t, TJ, NT,
+        } = userObj.rt;
         const user = {
-          nameFirst: sW,
-          nameLast: sU,
-          username: Cd,
-          email: yu,
-          avatar: PK,
-          googleId: OU,
+          nameFirst: tV,
+          nameLast: uT,
+          username: Ad,
+          email: $t,
+          avatar: TJ,
+          googleId: NT,
         };
         createUser(user);
         res.send(user);
